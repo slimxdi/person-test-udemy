@@ -49,7 +49,8 @@ const App = props => {
         personname={personState.persons[1].personname}
         age={personState.persons[1].age}
         click={switchNameHandler.bind(this, 'Max!')}
-        changed={nameChangedHandler}>I like turtles.
+        changed={nameChangedHandler}
+        value={props.personname}>I like turtles.
       </Person>
       <Person
         personname={personState.persons[2].personname}
