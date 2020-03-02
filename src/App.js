@@ -27,7 +27,7 @@ const App = props => {
 
   return (
     <div className="App">
-      <button onClick={switchNameHandler.bind(this, 'Maximillian')}>Switch Name</button>
+      <button onClick={()=>switchNameHandler('Maxima!')}>Switch Name</button>
       <Person
         personname={personState.persons[0].personname}
         age={personState.persons[0].age}>
