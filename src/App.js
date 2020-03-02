@@ -28,9 +28,20 @@ const App = props => {
   return (
     <div className="App">
       <button onClick={switchNameHandler}>Switch Name</button>
-      <Person personname={personState.persons[0].personname} age={personState.persons[0].age}></Person>
-      <Person personname={personState.persons[1].personname} age={personState.persons[1].age}>I like turtles.</Person>
-      <Person personname={personState.persons[2].personname} age={personState.persons[2].age}>I like broccoli corn chowder.</Person>
+      <Person
+        personname={personState.persons[0].personname}
+        age={personState.persons[0].age}>
+
+      </Person>
+      <Person
+        personname={personState.persons[1].personname}
+        age={personState.persons[1].age}
+        click={switchNameHandler}>I like turtles.
+      </Person>
+      <Person
+        personname={personState.persons[2].personname}
+        age={personState.persons[2].age}>I like broccoli corn chowder.
+      </Person>
     </div>
   );
 };
