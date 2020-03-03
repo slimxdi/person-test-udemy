@@ -35,17 +35,26 @@ const App = props => {
         ]
       }
     )
-  }
+  };
+
+  const myStyle={
+      backgroundColor: 'violet',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding:'8px',
+      cursor: 'pointer'
+  };
 
   return (
     <div className="App">
-      <button onClick={()=>switchNameHandler('Maxima!')}>Switch Name</button>
+      <button style={myStyle} onClick={()=>switchNameHandler('Maxima!')}>Switch Name</button>
       <Person
         personname={personState.persons[0].personname}
         age={personState.persons[0].age}>
 
       </Person>
       <Person
+        // className="person-B"
         personname={personState.persons[1].personname}
         age={personState.persons[1].age}
         click={switchNameHandler.bind(this, 'Max!')}
@@ -53,6 +62,7 @@ const App = props => {
         value={props.personname}>I like turtles.
       </Person>
       <Person
+        // className="person-C"
         personname={personState.persons[2].personname}
         age={personState.persons[2].age}>I like broccoli corn chowder.
       </Person>
